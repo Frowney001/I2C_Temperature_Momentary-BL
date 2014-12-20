@@ -14,7 +14,6 @@ int thermoPin = 0;           // pin the thermometer module is plugged into
 rgb_lcd lcd;                 // instantiate our LCD
 
 int buttonVal = 0;
-int buttonPin = 2;           // pin the button module is plugged into
 
 // Change these values to what you want the RGB of the backlight to be
 const int colorR = 255;
