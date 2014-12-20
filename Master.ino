@@ -13,6 +13,8 @@ int thermoPin = 0;           // pin the thermometer module is plugged into
 
 rgb_lcd lcd;                 // instantiate our LCD
 
+const byte Slave_Address = 14;
+
 int buttonVal = 0;
 
 // Change these values to what you want the RGB of the backlight to be
@@ -42,7 +44,7 @@ void setup()
 
 void loop() 
 {
-  Wire.requestFrom(14, 1);   // Ask serial device 14 for 1 byte of information
+  Wire.requestFrom(Slave_Address, 1);   // Ask serial device 14 for 1 byte of information
   
   while(Wire.available())    // slave may send less than requested (in this case, nothing)
   {
